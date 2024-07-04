@@ -1,5 +1,6 @@
 package com.springboot.demo;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
+@EntityScan(basePackages = {"com.springboot.demo"})
 public class ApplicationConfiguration {
     private final UserRepository userRepository;
 
